@@ -1,0 +1,1 @@
+# Unsupervised-Machinery-Fault-Detection-via-CLIP-with-Anomaly-Aware-Contrastive-Learning-and-SAM
