@@ -6,10 +6,11 @@ Abstract:
 ## Usage
 * Conda Enviroment
 
-    `conda env create -f environment.yaml`
+    `conda env create -f environment.yaml -n my_new_env`
 
 * For Training
 
+    `conda activate my_new_env`
     `sh run_train.sh`
   
 ## Results
