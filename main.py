@@ -34,6 +34,8 @@ from sklearn.metrics import (
     confusion_matrix,
     roc_curve,
     auc,
+    precision_recall_curve,
+    average_precision_score
 )
 
 from data_process_scripts.process_cwru import CWRU_Dataset
@@ -377,17 +379,24 @@ def evaluate(model, processor, test_loader, device):
     precision, recall, f1, _ = precision_recall_fscore_support(all_labels, all_preds, average='binary')
     conf_matrix = confusion_matrix(all_labels, all_preds)
 
-    fpr, tpr, thresholds = roc_curve(all_labels, all_scores)
+    fpr, tpr, _ = roc_curve(all_labels, all_scores)
     roc_auc = auc(fpr, tpr)
+
+    precision_curve, recall_curve, _ = precision_recall_curve(all_labels, all_scores)
+    pr_auc = auc(recall_curve, precision_curve)  
+    
+    pr_auc_score = average_precision_score(all_labels, all_scores)
 
     logging.info("\nEvaluation Results:")
     logging.info(f"Accuracy: {accuracy:.4f}")
     logging.info(f"Precision: {precision:.4f}")
     logging.info(f"Recall: {recall:.4f}")
     logging.info(f"F1 Score: {f1:.4f}")
+    logging.info(f"ROC AUC: {roc_auc:.4f}")
+    logging.info(f"PR AUC (auc): {pr_auc:.4f}")  
+    logging.info(f"PR AUC (average_precision): {pr_auc_score:.4f}")
     logging.info("Confusion Matrix:")
     logging.info(conf_matrix)
-    logging.info(f"AUC: {roc_auc:.4f}")
 
     return {
         "accuracy": accuracy,
@@ -396,6 +405,7 @@ def evaluate(model, processor, test_loader, device):
         "f1": f1,
         "confusion_matrix": conf_matrix,
         "auc": roc_auc,
+        "pr_auc": pr_auc_score,  
         "fpr": fpr,
         "tpr": tpr
     }
