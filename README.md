@@ -3,7 +3,8 @@ This is the official project repository for the papaer "Unsupervised Machinery F
 
 Abstract:Unsupervised machine fault detection is hindered by scarce fault data and the mismatch between synthetic and real anomalies. We reformulate fault detection as a cross-modal alignment problem and propose a CLIP-based framework that aligns vibration-signal images with textual state descriptions. To overcome the lack of fault data, we construct physically interpretable pseudo-faults through amplitude scaling and interval perturbations on raw signals, enabling label-free image–text training. We further introduce an Anomaly-Aware Contrastive Loss (AACL) that enforces inter-class separation while preserving cross-modal alignment, and adopt Sharpness-Aware Minimization (SAM) to mitigate overfitting to pseudo-fault artifacts and improve robustness. Experiments on three benchmark datasets demonstrate that our method surpasses state-of-the-art approaches.
 
-<img width="1343" height="566" alt="image" src="https://github.com/user-attachments/assets/30c6e855-f412-49e5-ac62-e1333c7e9e97" />
+<img width="1346" height="571" alt="image" src="https://github.com/user-attachments/assets/6c02ed16-ddea-4dd6-a67a-1a85005eeeaa" />
+
 
 
 ## Usage
