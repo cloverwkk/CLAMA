@@ -20,4 +20,5 @@ You can download the data from this [LINK](https://pan.quark.cn/s/b7806b883a60) 
     `sh run_train.sh`
   
 ## Results
-<img width="837" height="438" alt="image" src="https://github.com/user-attachments/assets/75c9d29f-981a-480f-9f39-a83bcbc2f5b9" />
+<img width="1340" height="703" alt="image" src="https://github.com/user-attachments/assets/1ef72abc-9a56-42f6-a294-1117149f1d4c" />
+
