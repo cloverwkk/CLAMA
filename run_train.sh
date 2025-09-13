@@ -13,7 +13,7 @@ python main.py \
     --con_index 2 \
     --adaptive True \
     --momentum 0.9 \
-    --rho 0.0001 \
+    --rho 0.001 \
     --weight_decay 0.0005 \
     --gpu_id 0
 
