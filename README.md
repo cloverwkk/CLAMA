@@ -17,7 +17,7 @@ You can download the data from this [LINK](https://pan.quark.cn/s/b7806b883a60) 
 
 * For Training
 
-    `conda activate my_new_env`
+    `conda activate my_new_env` \\
     `sh run_train.sh`
   
 ## Results
