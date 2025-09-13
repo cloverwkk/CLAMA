@@ -467,7 +467,7 @@ def main():
     parser.add_argument("--momentum", default=0.9, type=float, help="SGD Momentum.")
     parser.add_argument("--rho", default=0.0001, type=int, help="Rho parameter for SAM.")
     parser.add_argument("--weight_decay", default=0.0005, type=float, help="L2 weight decay.")
-    parser.add_argument("--gpu_id", type=int, default=0, help="GPU device ID to use (default: 0)")
+    parser.add_argument("--gpu_id", type=int, default=0, help="GPU device ID to use (default: )")
 
     args = parser.parse_args()
 
