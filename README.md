@@ -11,7 +11,7 @@ Abstract: Unsupervised machine fault detection is essential for maintaining prod
 You can download the data from this [LINK](https://pan.quark.cn/s/b7806b883a60) , or you can also download it from the official link.
 
 
-* Conda Enviroment
+* Create Enviroment
 
     `conda env create -f environment.yaml -n my_new_env`
 
